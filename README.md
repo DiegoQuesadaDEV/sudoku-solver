@@ -16,6 +16,7 @@ Here're some of the project's best features:
 
 *   Pure JavaScript
 *   Backtracking Algorithm
+*   Add your custom sudoku
 
   
   
