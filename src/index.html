@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <title>Sudoku Solver</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    body {
+      background-color: #fcfcfc;
+      color: black;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .app {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .buttons {
+      margin-top: 15px;
+    }
+
+    .buttons button {
+      display: inline-block;
+      width: 200px;
+      margin-bottom: 15px;
+      outline: 0;
+      cursor: pointer;
+      border: 2px solid #000;
+      border-radius: 3px;
+      color: #000;
+      background: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      padding: 12px 20px;
+      text-align: center;
+      transition-duration: 0.15s;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .buttons button:hover {
+      cursor: pointer;
+      background: rgb(251, 193, 245);
+    }
+
+    .sudoku-container {
+      margin-left: 10px;
+    }
+
+    .info-box {
+      margin-left: 30px;
+      width: 550px;
+    }
+
+    table {
+      margin: 0 auto;
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: 1em auto;
+    }
+
+    input[type="text"],
+    td {
+      height: 35px;
+      width: 35px;
+      font-size: 25px;
+      border: 1px solid;
+      text-align: center;
+    }
+
+    td:first-child {
+      border-left: solid;
+    }
+
+    tr:first-child {
+      border-top: solid;
+    }
+
+    td:nth-child(3n) {
+      border-right: solid;
+    }
+
+    tr:nth-child(3n) td {
+      border-bottom: solid;
+    }
+
+    p {
+      text-wrap: balance;
+    }
+  </style>
+  <body>
+    <h1>SUDOKU RESOLVER</h1>
+    <div class="app">
+      <div class="container">
+        <div class="buttons">
+          <button onclick="generate_sudoku();">GENERATE</button><br />
+          <button onclick="load_sudoku();">LOAD</button><br />
+          <button onclick="solve_sudoku();">SOLVE</button><br />
+          <button onclick="clear_gui();">CLEAR BOARD</button>
+        </div>
+
+        <div class="sudoku-container">
+          <table id="gui"></table>
+        </div>
+
+        <div class="info-box">
+          <p>
+            This JavaScript-based Sudoku solver features a pure JavaScript implementation. Additionally, both the graphical user interface (GUI) and its styling are crafted entirely through JavaScript and CSS, respectively.<br />
+            It uses a
+            <a
+              href="https://en.wikipedia.org/wiki/Sudoku_solving_algorithms"
+              target="blank"
+            >
+              backtracking algorithm</a
+            >.
+          </p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Sudoku_solved_by_bactracking.gif"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="sudoku.js"></script>
+  </body>
+</html>

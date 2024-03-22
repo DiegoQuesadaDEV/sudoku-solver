@@ -1,0 +1,9 @@
+{
+  "name": "sudoku-solver",
+  "version": "1.0.0",
+  "description": "Sudoku solver in javascript",
+  "main": "index.js",
+  "repository": "https://github.com/DiegoQuesadaDEV/sudoku-solver-js.git",
+  "author": "Diego Quesada",
+  "license": "MIT"
+}
